@@ -1,10 +1,10 @@
 package main
 
-import "fmt"
-
-import "goPlayground/chapter5/links"
-
-import "log"
+import (
+	"fmt"
+	"goPlayground/chapter5/links"
+	"log"
+)
 
 // 在worklist非空时
 // 对每个元素调用f，并将f返回的结果加入到worklist后
@@ -32,6 +32,6 @@ func craw(url string) []string {
 }
 
 func main() {
-	url := "https://golang.org"
+	url := "https://github.com"
 	bfs(craw, []string{url})
 }
